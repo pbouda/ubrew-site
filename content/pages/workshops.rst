@@ -1,0 +1,3 @@
+Workshops
+#########
+:menuindex: 3

@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Peter Bouda'
 SITENAME = 'HaQt'
 SITESUBNAME = 'Sei kreativ'
-SITESUBTITLE = 'Programmieren Lernen mit Qt'
+SITESUBTITLE = 'Kreativ und Produktiv Programmieren mit Qt'
 SITEURL = ''
 
 PATH = 'content'
