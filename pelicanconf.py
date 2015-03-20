@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
 SITENAME = 'HaQt'
-SITESUBNAME = 'Ungleich kreativ'
+SITESUBNAME = 'Unvergleichlich kreativ'
 SITESUBTITLE = 'Kreativ und Produktiv Programmieren mit Qt'
 SITEURL = ''
 
