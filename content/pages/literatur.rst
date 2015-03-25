@@ -1,3 +1,0 @@
-Literatur
-#########
-:menuindex: 4

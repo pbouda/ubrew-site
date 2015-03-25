@@ -3,9 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
-SITENAME = 'HaQt'
-SITESUBNAME = 'Ungleich kreativ'
-SITESUBTITLE = 'Kreativ und Produktiv Programmieren mit Qt'
+SITENAME = 'Die Hummbeere.'
+SITESUBTITLE = 'Hackable field recorder.'
 SITEURL = ''
 
 PATH = 'content'
