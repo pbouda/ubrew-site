@@ -282,6 +282,16 @@
 					padding: 0 1em 0 1em;
 				}
 
+		section.major footer
+		{
+			text-align: center;
+		}
+
+		section.box footer
+		{
+			text-align: left;
+		}
+
 	/* Box */
 
 		.box
@@ -688,7 +698,7 @@
 /* Banner                                                                        */
 /*********************************************************************************/
 
-	#banner
+	.banner
 	{
 		background: #CCE8F4 url('../images/pic01.jpg');
 		background-position: center center;
@@ -697,25 +707,25 @@
 		text-align: center;
 	}
 
-		#banner header
-		{
-			background-color: #1fd26a;
-			background-color: rgba(34,30,31,0.98);
-		}
+	.banner header
+	{
+		background-color: #1fd26a;
+		background-color: rgba(34,30,31,0.98);
+	}
 		
-			#banner header h2
-			{
-				color: #fff;
-				font-weight: 700;
-			}
+	.banner header h2
+	{
+		color: #fff;
+		font-weight: 700;
+	}
 			
-			#banner header p
-			{
-				color: #ec3f8c;
-				padding: 0;
-				font-style: normal;
-				margin: 0;
-			}
+	.banner header p
+	{
+		color: #ec3f8c;
+		padding: 0;
+		font-style: normal;
+		margin: 0;
+	}
 
 /*********************************************************************************/
 /* Wrappers                                                                      */

@@ -1,3 +1,3 @@
-Shop
+Buy!
 ####
-:menuindex: 3
+:menuindex: 4
