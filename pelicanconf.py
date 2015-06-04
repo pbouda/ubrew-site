@@ -3,15 +3,15 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
-SITENAME = 'Die Hummbeere.'
-SITESUBTITLE = 'Hackable field recorder.'
+SITENAME = 'μbrew.'
+SITESUBTITLE = 'DIY and Embedded Gaming.'
 SITEURL = ''
 
 PATH = 'content'
 
 TIMEZONE = 'Europe/Lisbon'
 
-DEFAULT_LANG = 'de'
+DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

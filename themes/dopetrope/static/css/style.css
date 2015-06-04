@@ -40,7 +40,7 @@
 
 	strong, b
 	{
-		color: #1fd26a;
+		color: #2bb673;
 		font-weight: 400;
 	}
 
@@ -84,7 +84,7 @@
 
 	a
 	{
-		color: #ec3f8c;
+		color: #ed0281;
 		text-decoration: underline;
 	}
 	
@@ -120,7 +120,7 @@
 			form label
 			{
 				display: block;
-				color: #1fd26a;
+				color: #2bb673;
 				font-weight: 400;
 				margin: 0 0 0.5em 0;
 			}
@@ -319,7 +319,7 @@
 			cursor: pointer;
 			border: 0;
 			border-radius: 5px;
-			background: #ec3f8c;
+			background: #ed0281;
 			color: #fff !important;
 			font-weight: 700;
 			outline: 0;
@@ -351,7 +351,7 @@
 			input[type="reset"].alt,
 			.button.alt
 			{
-				background: #1fd26a;
+				background: #2bb673;
 			}
 
 				input[type="button"].alt:hover,
@@ -490,7 +490,7 @@
 					position: absolute;
 					left: 0;
 					top: 1.3em;
-					background-color: #ec3f8c;
+					background-color: #ed0281;
 					height: 3.5em;
 					text-align: center;
 					color: #fff;
@@ -506,7 +506,7 @@
 						position: absolute;
 						bottom: 0;
 						right: -1.2em;
-						border-left: solid 1.25em #ec3f8c;
+						border-left: solid 1.25em #ed0281;
 						border-top: solid 1.8em transparent;
 						border-bottom: solid 1.8em transparent;
 					}
@@ -647,7 +647,7 @@
 		{
 			position: relative;
 			display: inline-block;
-			background-color: #ec3f8c;
+			background-color: #ed0281;
 			width: 9em;
 			padding: 1.75em 0 0.75em 0;
 			border-top-left-radius: 5px;
@@ -669,29 +669,29 @@
 				position: absolute;
 				bottom: -1.95em;
 				left: 0;
-				border-top: solid 2em #ec3f8c;
+				border-top: solid 2em #ed0281;
 				border-left: solid 4.5em transparent;
 				border-right: solid 4.5em transparent;
 			}
 
 			.icon.featured.alt
 			{
-				background-color: #1fd26a;
+				background-color: #2bb673;
 			}
 			
 				.icon.featured.alt:after
 				{
-					border-top-color: #1fd26a;
+					border-top-color: #2bb673;
 				}
 
 			.icon.featured.alt2
 			{
-				background-color: #b3d4fc;
+				background-color: #fcb040;
 			}
 			
 				.icon.featured.alt2:after
 				{
-					border-top-color: #b3d4fc;
+					border-top-color: #fcb040;
 				}
 							
 /*********************************************************************************/
@@ -700,7 +700,7 @@
 
 	.banner
 	{
-		background: #CCE8F4 url('../images/pic01.jpg');
+		background: #80bfa7 url('../images/pic01.png');
 		background-position: center center;
 		background-size: auto 100%;
 		background-repeat: no-repeat;
@@ -709,7 +709,7 @@
 
 	.banner header
 	{
-		background-color: #1fd26a;
+		background-color: #2bb673;
 		background-color: rgba(34,30,31,0.98);
 	}
 		
@@ -721,7 +721,7 @@
 			
 	.banner header p
 	{
-		color: #ec3f8c;
+		color: #ed0281;
 		padding: 0;
 		font-style: normal;
 		margin: 0;

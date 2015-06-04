@@ -155,7 +155,7 @@
 
 	#header-wrapper
 	{
-		padding: 4.5em 0 4em 0;
+		padding: 2em 0 4em 0;
 	}
 
 	#main-wrapper
@@ -259,7 +259,7 @@
 		
 			#nav > ul > li.current > a
 			{
-				background: #ec3f8c;
+				background: #ed0281;
 				color: #fff !important;
 				font-weight: 700;
 			}
