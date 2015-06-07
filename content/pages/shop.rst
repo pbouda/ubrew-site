@@ -1,3 +1,3 @@
 Shop
 ####
-:menuindex: 3
+:menuindex: 4
