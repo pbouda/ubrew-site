@@ -17,7 +17,7 @@
 					<header>
 						{% include 'article_infos.html' %}
 						<h2><a href="/{{ article.url }}">{{ article.title }}</a></h2>
-						<a href="/{{ article.url }}" class="image featured" style="margin: 0 0 4.25em -3.5em;"><img src="{{ article.image }}" /></a>
+						<a href="/{{ article.url }}" class="article image featured"><img src="{{ article.image }}" /></a>
 					</header>
 					<p>{{ article.summary }}</p>
 					<footer>
@@ -32,7 +32,7 @@
 				{% if articles_page.has_previous() or articles_page.has_next() %}
 	                {% include 'pagination.html' %}
                 {% endif %}
-                
+
 			</div>
 
 			{% include 'sidebar.html' %}

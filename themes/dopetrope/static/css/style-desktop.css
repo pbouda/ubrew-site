@@ -61,6 +61,10 @@
 				margin: -4.5em 0 4.25em -3.5em;
 			}
 
+			.box .image.featured.article {
+				margin-top: 0;
+			}
+
 			.box.post
 			{
 			}
