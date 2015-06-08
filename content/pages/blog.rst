@@ -1,3 +1,3 @@
 Blog
 ####
-:menuindex: 0
+:menuindex: 3

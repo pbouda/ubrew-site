@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<body class="right-sidebar">
+
+{% include 'header.html' %}
+
+<!-- Main -->
+<div id="main-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="{% if page.children %}8u{% else %}12u{% endif %}">
+				<section class="box">
+					<header>
+						<h2>{{ page.title }}</h2>
+					</header>
+					{{ page.content }}
+				</section>
+			</div>
+
+			{% if page.children %}
+			<!-- Sidebar -->
+			<div class="4u">
+				<section class="box">
+					<header>
+						<h3>Contents</h3>
+						{% for child in page.children %}
+						<p><a href="/{{ child.url }}">{{ child.title }}</a></p>
+						{% endfor %}
+					</header>
+				</section>
+			</div>
+			{% endif %}
+
+		</div>
+	</div>
+</div>
+
+</body>
+
+{% endblock %}

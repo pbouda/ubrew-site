@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% block body %}
 
 <body class="homepage">
@@ -24,7 +25,7 @@
 								</header>
 								<p>The μbrew Embedded Entertainment Kit is a modular framework to build your own entertainment and gaming machine. It is a customizable solution to provide your own app store on your embedded platform. It is based on Buildroot, Systemd and Btrfs and features dependency and package management, a graphical environment to launch apps and an SDK with editor and designer for app developers.</p>
 								<footer>
-									<a href="#" class="button">Download and Play!</a>&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="#" class="button">Build and Play!</a>&nbsp;&nbsp;&nbsp;&nbsp;
 									<a href="#" class="button alt">Go to Developer Page</a>
 								</footer>
 							</section>
@@ -129,40 +130,29 @@
 				<section>
 					<header class="major">
 						<h2>μbrew Blog</h2>
+						<p><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" class="icon fa-rss"><span class="label">RSS</span></a></p>
 					</header>
 					<div class="row">
-						<div class="6u">
-							<section class="box">
-								<a href="#" class="image featured"><img src="/theme/images/pic08.jpg" alt="" /></a>
-								<header>
-									<h3>Magna tempus consequat lorem</h3>
-									<p>Posted 45 minutes ago</p>
-								</header>
-								<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
-								<footer>
-									<ul class="actions">
-										<li><a href="#" class="button icon fa-file-text">Lesen</a></li>
-										<li><a href="#" class="button alt icon fa-comment">33 comments</a></li>
-									</ul>
-								</footer>
-							</section>
-						</div>
-						<div class="6u">
-							<section class="box">
-								<a href="#" class="image featured"><img src="/theme/images/pic09.jpg" alt="" /></a>
-								<header>
-									<h3>Aptent veroeros et aliquam</h3>
-									<p>Posted 45 minutes ago</p>
-								</header>
-								<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
-								<footer>
-									<ul class="actions">
-										<li><a href="#" class="button icon fa-file-text">Lesen</a></li>
-										<li><a href="#" class="button alt icon fa-comment">33 comments</a></li>
-									</ul>
-								</footer>
-							</section>
-						</div>
+						{% for article in dates %}
+							{% if loop.index < 2 %}
+								<div class="6u">
+									<section class="box">
+										<a href="/{{ article.url }}" class="image featured"><img src="{{ article.image }}" /></a>
+										<header>
+											<h3>{{ article.title }}</h3>
+											{% include 'article_infos.html' %}
+										</header>
+										<p>{{ article.summary }}</p>
+										<footer>
+											<ul class="actions">
+												<li><a href="/{{ article.url }}" class="button icon fa-file-text">Read</a></li>
+												<li><a href="/{{ article.url }}#comments" class="button alt icon fa-comment">0 comments</a></li>
+											</ul>
+										</footer>
+									</section>
+								</div>
+							{% endif %}
+						{% endfor %}
 					</div>
 				</section>
 			</div>

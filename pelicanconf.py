@@ -22,6 +22,16 @@ AUTHOR_FEED_RSS = None
 
 THEME = 'themes/dopetrope'
 
+PLUGIN_PATHS = [ "plugins" ]
+PLUGINS = [ "pelican-page-hierarchy" ]
+
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
+SLUGIFY_SOURCE = 'basename'
+
+USE_FOLDER_AS_CATEGORY = True
+TYPOGRIFY = True
+
 # Blogroll
 #LINKS = (('Pelican', 'http://getpelican.com/'),
 #         ('Python.org', 'http://python.org/'),

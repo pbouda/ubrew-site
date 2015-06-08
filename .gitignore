@@ -1,1 +1,5 @@
 output
+.DS_Store
+*.pid
+__pycache__
+cache

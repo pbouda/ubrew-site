@@ -388,6 +388,9 @@
 		#intro p
 		{
 			margin: 0;
+			padding-left: 10px;
+			padding-right: 10px;
+			text-align: justify;
 		}
 	
 		#intro .middle

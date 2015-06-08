@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<body class="right-sidebar">
+
+{% include 'header.html' %}
+
+<!-- Main -->
+<div id="main-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="8u">
+				<article class="box post">
+					<header>
+						<h2>{{ page.title }}</h2>
+					</header>
+					{{ page.content }}
+				</article>
+			</div>
+
+			<!-- Sidebar -->
+			<div class="4u">
+				<section class="box">
+					<header>
+						<h3>Contents</h3>
+						<p><a href="#">Raspberry Pi instructions</a></p>
+					</header>
+				</section>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+{% endblock %}
