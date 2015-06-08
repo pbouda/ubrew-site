@@ -1,6 +1,6 @@
 Shop
 ####
-:menuindex: 4
+:menuindex: 5
 
 * Raspberry 2
 * Case

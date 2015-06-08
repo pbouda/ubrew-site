@@ -57,7 +57,10 @@ def set_relationships(generator):
     for page in _all_pages():
         # Parent of /a/b/ is /a/, parent of /a/b.html is /a/
         parent_url = os.path.dirname(page.url[:-1])
-        if parent_url: parent_url += '/'
+        if parent_url:
+            parent_url += '/'
+        else:
+            continue
         for page2 in _all_pages():
             if page2.url == parent_url and page2 != page:
                 page.parent = page2

@@ -1,3 +1,3 @@
 Workshops
 #########
-:menuindex: 2
+:menuindex: 3

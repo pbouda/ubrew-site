@@ -1,3 +1,3 @@
 Build it!
 =========
-:menuindex: 0
+:menuindex: 1

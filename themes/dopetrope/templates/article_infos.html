@@ -1,5 +1,5 @@
 <p>
-    Published by <a href="http://www.peterbouda.eu">Peter Bouda</a> at <b>{{ article.locale_date }}</b>
+    Published by <a href="http://www.peterbouda.eu">Peter Bouda</a> on <b>{{ article.date|strftime('%d.%m.%Y') }}</b>
     in <b><a href="/{{ article.category.url }}">{{ article.category }}</a></b>.
 </p>
 

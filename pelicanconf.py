@@ -32,6 +32,8 @@ SLUGIFY_SOURCE = 'basename'
 USE_FOLDER_AS_CATEGORY = True
 TYPOGRIFY = True
 
+INDEX_SAVE_AS = 'blog/index.html'
+
 # Blogroll
 #LINKS = (('Pelican', 'http://getpelican.com/'),
 #         ('Python.org', 'http://python.org/'),
@@ -42,7 +44,7 @@ TYPOGRIFY = True
 #SOCIAL = (('You can add links in your config file', '#'),
 #          ('Another social link', '#'),)
 
-#DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 6
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

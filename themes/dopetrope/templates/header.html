@@ -9,11 +9,14 @@
 		<!-- Nav -->
 			<nav id="nav">
 				<ul>
-					<li {% if output_file == 'index.html' %}class="current"{% endif %}><a href="/">Home</a></li>
+					<!-- <li {% if output_file == 'index.html' %}class="current"{% endif %}><a href="/">Home</a></li>-->
                     {% if DISPLAY_PAGES_ON_MENU -%}
-                    {% for page in PAGES|sort(attribute='menuindex') %}
-                    	{% if page.parent is none %}
-	                        <li {% if output_file == page.url %}class="current"{% endif %}><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                    {% for p in PAGES|sort(attribute='menuindex') %}
+                    	{% if p.parent is none %}
+                    		{% if loop.index == loop.length %}
+			                    <li {% if output_file == "blog/index.html" or output_file.startswith("20") %}class="current"{% endif %}><a href="{{ SITEURL }}/blog/index.html">Blog</a></li>
+                    		{% endif %}
+	                        <li {% if p == page %}class="current"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
 	                    {% endif %}
                     {% endfor %}
                     {% endif %}
