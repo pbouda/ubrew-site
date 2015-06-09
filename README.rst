@@ -11,7 +11,7 @@ send a pull request. To start the Pelican development server::
 This makes the site available at http://localhost:8000. To stop the server
 again::
 
-	$ make devserver
+	$ make stopserver
 
 
 License
