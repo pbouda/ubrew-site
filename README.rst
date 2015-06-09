@@ -17,5 +17,10 @@ again::
 License
 -------
 
-Die Brummbeere source code is distributed under the GNU GENERAL PUBLIC LICENSE
-Version 3.
+Die μbrew website source code is distributed under the GNU GENERAL PUBLIC
+LICENSE Version 3.
+
+The contained theme is based on the Dopetrope theme at http://html5up.net and
+is licensed as Creative Commons:
+
+http://html5up.net/license
