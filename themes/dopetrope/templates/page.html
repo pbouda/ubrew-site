@@ -25,7 +25,7 @@
 				<section class="box">
 					<header>
 						<h3>Contents</h3>
-						{% for child in page.children %}
+						{% for child in page.children|sort(attribute='menuindex') %}
 						<p><a href="/{{ child.url }}">{{ child.title }}</a></p>
 						{% endfor %}
 					</header>
