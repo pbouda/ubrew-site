@@ -1,7 +1,6 @@
-Welcome to μbrew!
-=================
-:date: 2015-06-08 16:27
-:image: /theme/images/pic01.png
+Title: Welcome to μbrew!
+Date: 2015-06-08 16:27
+Image: /theme/images/pic01.png
 
 Welcome everybody! This is μbrew, your central place to find information about
 gaming on embedded systems. We define the term "embedded" rather losely, and
