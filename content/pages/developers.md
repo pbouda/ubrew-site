@@ -14,7 +14,7 @@ can [fork our repositories at GitHub](https://github.com/ubrew-it).
 
 # Next steps
 
-1. [Build the μbrew Kit for the Raspberry]({filename}developers/ubrewkit.md)
+1. [Build the μbrew development kit for the Raspberry]({filename}developers/ubrewkit.md)
 2. [Create a game with V-Play]({filename}developers/vplay.md)
 
 # More info
