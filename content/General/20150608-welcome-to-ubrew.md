@@ -2,10 +2,10 @@ Title: Welcome to μbrew!
 Date: 2015-06-08 16:27
 Image: /theme/images/pic01.png
 
-Welcome everybody! This is μbrew, your central place to find information about
-gaming on embedded systems. We define the term "embedded" rather losely, and
-will blog about games and game development on devices like the Arduino and
-the Raspberry Pi.
+Welcome to the μbrew project site! This is μbrew, your central place to find
+information about gaming on embedded systems. We define the term "embedded"
+rather loosely, and will blog about games and game development on devices like
+the Arduino and the Raspberry Pi.
 
 Last but not least we hereby initiate a new game launcher project,
 which we call the "μbrew Kit". It will be a minimal Linux system that boots

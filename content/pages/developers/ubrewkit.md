@@ -73,11 +73,11 @@ environment variable `VPLAY_SDK_PATH` to point to you V-Play installation before
 running the script. The standard path of the V-Play SDK is your home directory,
 for example:
 
-    $ export VPLAY_SDK_PATH=/home/pbouda/VPlay-SDK
+    $ export VPLAY_SDK_PATH=/home/user/V-PlaySDK
 
 The just run the `install.sh` script:
 
-    $ install.sh
+    $ ./install.sh
 
 This will start the build process, which may take several hours. Check out
 some of the V-Play tutorials meanwhile, and learn to build your first game!
