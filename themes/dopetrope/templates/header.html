@@ -16,7 +16,7 @@
                     		{% if loop.index == loop.length %}
 			                    <li {% if output_file == "blog/index.html" or output_file.startswith("20") %}class="current"{% endif %}><a href="{{ SITEURL }}/blog/index.html">Blog</a></li>
                     		{% endif %}
-	                        <li {% if p == page %}class="current"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+	                        <li {% if page == p %}class="current"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
 	                    {% endif %}
                     {% endfor %}
                     {% endif %}

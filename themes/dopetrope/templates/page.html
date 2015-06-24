@@ -10,7 +10,7 @@
 <div id="main-wrapper">
 	<div class="container">
 		<div class="row">
-			<div class="{% if page.children %}8u{% else %}12u{% endif %}">
+			<div class="{% if page.children or page.parent %}8u{% else %}12u{% endif %}">
 				<section class="box">
 					<header>
 						<h2>{{ page.title }}</h2>
@@ -18,6 +18,18 @@
 					{{ page.content }}
 				</section>
 			</div>
+
+			{% if page.parent %}
+			<!-- Sidebar -->
+			<div class="4u">
+				<section class="box">
+					<header>
+						<h3>Chapter Of</h3>
+						<p><a href="/{{ page.parent.url }}">{{ page.parent.title }}</a></p>
+					</header>
+				</section>
+			</div>
+			{% endif %}
 
 			{% if page.children %}
 			<!-- Sidebar -->
@@ -32,6 +44,7 @@
 				</section>
 			</div>
 			{% endif %}
+
 
 		</div>
 	</div>
