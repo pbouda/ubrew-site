@@ -10,7 +10,7 @@ We currently focus on the Raspberry Pi as the platform and the V-Play Game
 Engine for game development.
 
 If you are a developer and want to contribute to or modify our project you
-can [fork our repositories at Github](https://github.com/ubrew-it).
+can [fork our repositories at GitHub](https://github.com/ubrew-it).
 
 # Next steps
 
