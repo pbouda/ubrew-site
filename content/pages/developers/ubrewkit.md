@@ -20,7 +20,8 @@ to boot your computer with Linux. We recommend a distribution like
 [Ubuntu](http://www.ubuntu.com/) or [Kubuntu](http://www.kubuntu.org/) as they
 are easy to install and use. Just follow the instructions on the distribution's
 website to install and boot Linux. The computer that you use to build Buildroot
-and to create your games later is called the "host".
+and to create your games later is called the "host". The device that runs the
+games is called the "target" (the Raspberry, in our case).
 
 
 # Step 1: Install developer tools
@@ -84,13 +85,65 @@ some of the V-Play tutorials meanwhile, and learn to build your first game!
 
 [http://v-play.net/doc/](http://v-play.net/doc/)
 
+# Step 4: Prepare SD card
 
-# Step 4: Prepare Qt Creator for cross-compilation
+The SD card has to co be prepared with a certain partition layout in order to
+be bootable on the Raspberry. The standard layout is a small FAT partition and
+a larger ext4 partition in this order. The easiest way to prepare the card is
+to install a standard Raspbian on the card. This will also install the
+mandatory binary firmware and license to boot the Raspberry. You can find
+information about the process on the Raspberry download page:
+
+[https://www.raspberrypi.org/downloads/](https://www.raspberrypi.org/downloads/)
+
+Just follow the instructions given on the page under the `Raspbian` heading.
+
+
+# Step 5: Install Linux image on SD card
+
+To install the root file system we will now format the second partition on the
+SD card with an ext4 file system, extract the file system that Buildroot created
+and copy the Buildroot kernel onto the first FAT partition. The repository
+contains the file `buildroot-qt-dev/script/installrootfs.sh` that executes all
+commands. The script needs to know the device of your SD card. Please check
+carefully which device your SD card uses and adapt the script. Currently the
+device for the SD card is `/dev/sdX`. Change those device names to your setup
+*in all locations*.
+
+If your SD card is still mounted from the previous step you might just call
+`mount` to see a list of all file systems. Find your SD card in this list and
+use the device names that are listed (like `/dev/sdc1` and `/dev/sdc2`).
+
+*Careful: Your SD card has to prepared with the two Raspberry partitions. If
+you do not edit the script `installrootfs.sh` with the correct device names
+your hard disk might get formatted!*
+
+You can now run the script. The script expects the path to the root file system
+image and the kernel as the first argument. Buildroot puts those in the folder
+`output/images`. So change directory into `scripts` and run `installrootfs.sh`
+with the absolute path to your `buildroot-2015.05/output/images` folder:
+
+    $ cd buildroot-qt-dev/scripts/
+    $ ./installrootfs.sh /path/to/buildroot-qt-dev/buildroot-2015.05/output/images
+
+This will format, extract and copy. After the script finishes it is safe to
+remove the SD card from your computer and insert it into your Raspberry. Power
+on the Raspberry and see the system boot. If you attached a network cable
+you should be able open a shell via SSH. The username is `root` with password
+`raspi`. Here is a nice one liner to find your Raspberry on the network (needs
+`nmap` installed):
+
+    $ sudo nmap -sP 192.168.1.0/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}'
+
+[via [pierre-o's Known](https://microblog.pierre-o.fr/2015/one-liner-to-find-raspberrypi-on-your-local-network)]
+
+
+# Step 6: Prepare Qt Creator for cross-compilation
 
 TODO
 
 
-# Step 5: Build and play your first game: Flappy Bird!
+# Step 7: Build and play your first game: Flappy Bird!
 
 TODO
 

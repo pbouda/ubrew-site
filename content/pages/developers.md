@@ -1,10 +1,10 @@
 Title: Developers
 Menuindex: 2
 
-The μbrew Kit is a collection of open source projects and tools to build a
-Linux system specialized on gaming for embedded devices like the Raspberry Pi.
-It also features a toolchain and a game development kit to develop your own apps
-and games for the supported devices.
+The μbrew development kit is a collection of open source projects and tools to
+build a Linux system specialized on gaming for embedded devices like the
+Raspberry Pi. It also features a toolchain and a game development kit to develop
+your own apps and games for the supported devices.
 
 We currently focus on the Raspberry Pi as the platform and the V-Play Game
 Engine for game development.

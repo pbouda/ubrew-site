@@ -24,8 +24,16 @@
 			<div class="4u">
 				<section class="box">
 					<header>
-						<h3>Chapter Of</h3>
+						<h3>Go up</h3>
 						<p><a href="/{{ page.parent.url }}">{{ page.parent.title }}</a></p>
+					</header>
+				</section>
+				<section class="box">
+					<header>
+						<h3>Contents</h3>
+						{% for child in page.parent.children|sort(attribute='menuindex') %}
+						<p><a href="/{{ child.url }}">{{ child.title }}</a></p>
+						{% endfor %}
 					</header>
 				</section>
 			</div>

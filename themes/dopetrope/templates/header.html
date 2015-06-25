@@ -4,7 +4,7 @@
 	<div id="header">
 		
 		<!-- Logo -->
-			<a href="/index.html"><img style="margin-bottom:20px;" src="/theme/images/logo.png"/></a>
+			<a href="/"><img style="margin-bottom:20px;" src="/theme/images/logo.png"/></a>
 		
 		<!-- Nav -->
 			<nav id="nav">
@@ -13,10 +13,10 @@
                     {% if DISPLAY_PAGES_ON_MENU -%}
                     {% for p in PAGES|sort(attribute='menuindex') %}
                     	{% if p.parent is none %}
+	                        <li {% if page and ( (p.url != "" and page.url.startswith(p.url)) or (p.url == "" and page.url == "") ) %}class="current"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
                     		{% if loop.index == loop.length %}
 			                    <li {% if output_file == "blog/index.html" or output_file.startswith("20") %}class="current"{% endif %}><a href="{{ SITEURL }}/blog/index.html">Blog</a></li>
                     		{% endif %}
-	                        <li {% if page == p %}class="current"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
 	                    {% endif %}
                     {% endfor %}
                     {% endif %}
