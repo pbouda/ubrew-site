@@ -76,7 +76,7 @@ for example:
 
     $ export VPLAY_SDK_PATH=/home/user/V-PlaySDK
 
-The just run the `install.sh` script:
+Then just run the `install.sh` script:
 
     $ ./install.sh
 
@@ -140,7 +140,16 @@ you should be able open a shell via SSH. The username is `root` with password
 
 # Step 6: Prepare Qt Creator for cross-compilation
 
-TODO
+![Screen of Qt Creator dialog for Devices]({filename}/images/qt_creator_devices.png)
+
+![Screen of Qt Creator dialog for compilers]({filename}/images/qt_creator_compilers.png)
+
+    /path/to/ubrew-dev-buildroot/buildroot-qt-dev/buildroot-2015.05/output/host/usr/bin/arm-buildroot-linux-gnueabihf-g++
+
+![Screen of Qt Creator dialog for Qt Versions]({filename}/images/qt_creator_qtversions.png)
+
+![Screen of Qt Creator dialog for Kits]({filename}/images/qt_creator_kits.png)
+
 
 
 # Next steps
