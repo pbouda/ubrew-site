@@ -50,7 +50,7 @@ The V-Play download does not contain the necessary libraries for the Raspberry.
 We will install the Raspberry binaries in the next step.
 
 
-# Step 3: Install μbrew development kit
+# Step 3: Build μbrew development kit
 
 The μbrew development kit consists of a config file for
 [Buildroot](http://buildroot.net/) and some scripts to install V-Play and
@@ -99,7 +99,7 @@ information about the process on the Raspberry download page:
 Just follow the instructions given on the page under the `Raspbian` heading.
 
 
-# Step 5: Install Linux image on SD card
+# Step 5: Install μbrew Linux image on SD card
 
 To install the root file system we will now format the second partition on the
 SD card with an ext4 file system, extract the file system that Buildroot created
@@ -143,9 +143,13 @@ you should be able open a shell via SSH. The username is `root` with password
 TODO
 
 
-# Step 7: Build and play your first game: Flappy Bird!
+# Next steps
 
-TODO
+When you finished the setup of the μbrew development kit it is time to build
+your first game with V-Play. In the next section you will learn how to compile
+and run Flappy Bird on the Raspberry.
+
+[Create a game with V-Play]({filename}vplay.md)
 
 
 # More info

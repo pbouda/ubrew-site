@@ -12,6 +12,12 @@ Engine for game development.
 If you are a developer and want to contribute to or modify our project you
 can [fork our repositories at GitHub](https://github.com/ubrew-it).
 
+# License
+
+All μbrew source code is distributed under the GNU GENERAL PUBLIC LICENSE
+Version 3.
+
+
 # Next steps
 
 1. [Build the μbrew development kit for the Raspberry]({filename}developers/ubrewkit.md)
