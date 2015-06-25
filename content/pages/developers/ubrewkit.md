@@ -140,16 +140,61 @@ you should be able open a shell via SSH. The username is `root` with password
 
 # Step 6: Prepare Qt Creator for cross-compilation
 
+To develop games for the Raspberry we will use the Qt Creator that comes with
+V-Play. It provides a light-weight IDE for Qt development with several tools
+that make your life as a developer much easier. But first, we have to add the
+Qt version of the Buildroot environment as a so-called "Kit" in Qt Creator.
+
+Start by opening the Qt Creator that was shipped with V-Play. It should be
+installed as a standard application that you can find in your Linux application
+menu. Alternatively you can start `qtcreator` in your V-Play installation at
+`V-PlaySDK/Tools/QtCreator/bin`.
+
+Now open the options dialog in the menu `Tools -> Options...`. Open the section
+`Devices` of the dialog. Here we will add the Raspberry as a remote device, so
+that we can deploy and run any game later on the Raspberry. This requires the
+Raspberry to be turned on and connected to the local network. If you followed
+all the above steps and connected a network cable to the Raspberry
+everything should work fine. As a reminder, to find the IP address of your
+Raspberry on the network you can type:
+
+    $ sudo nmap -sP 192.168.1.0/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}'
+
+Then enter the IP address, the user name ("root"), the password ("raspi") and
+a device name ("Raspi 2", for example) in the dialog, like shown in the
+following screenshot:
+
 ![Screen of Qt Creator dialog for Devices]({filename}/images/qt_creator_devices.png)
 
-![Screen of Qt Creator dialog for compilers]({filename}/images/qt_creator_compilers.png)
+Next, change to the section `Build & Run`. Here we will add the GCC compiler of
+Buildroot. Click on the tab `Compilers` and then on `Add -> GCC`. Next to the
+field `Compiler path` click on `Browse...` and browse to the Buildroot
+directory. The cross-compiler `arm-buildroot-linux-gnueabihf-g++` is stored in
+`output/host/usr/bin`, the full path might look something like:
 
     /path/to/ubrew-dev-buildroot/buildroot-qt-dev/buildroot-2015.05/output/host/usr/bin/arm-buildroot-linux-gnueabihf-g++
 
+Select the compiler and set a name to find it later (like "GCC Raspi 2 V-Play"):
+
+![Screen of Qt Creator dialog for compilers]({filename}/images/qt_creator_compilers.png)
+
+Parallel to the compiler we need to set the path to `qmake` in Buildroot.
+Change to the tab `Qt versions` and click on `Add...`. Browse again to the
+`output/host/usr/bin` of Buildroot and select the `qmake` there. Don't forget
+to set a name for your Qt version:
+
 ![Screen of Qt Creator dialog for Qt Versions]({filename}/images/qt_creator_qtversions.png)
+
+The last step is to create a kit from the device, compiler and the Qt version.
+You need to click on `Apply` now in the dialog so that all settings are stored.
+Change to the tab `Kits` and click `Add`. Now enter a name for the kit and
+choose the device, compiler and Qt version that you just created from the
+drop-down lists:
 
 ![Screen of Qt Creator dialog for Kits]({filename}/images/qt_creator_kits.png)
 
+To store your settings click `OK` in the dialog. You are now ready to run your
+first game on the Raspberry!
 
 
 # Next steps
