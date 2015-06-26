@@ -203,7 +203,7 @@ When you finished the setup of the μbrew development kit it is time to build
 your first game with V-Play. In the next section you will learn how to compile
 and run Flappy Bird on the Raspberry.
 
-[Create a game with V-Play]({filename}vplay.md)
+[Build and run a game with V-Play]({filename}vplay.md)
 
 
 # More info
