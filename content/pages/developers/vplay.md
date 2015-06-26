@@ -54,3 +54,7 @@ Feel free to play around with the Flappy Bird code to make yourself familiar
 with Qt Creator and the development process. Whenever you change some code now
 you can simply press `Run`, and the modified version will be started on the
 Raspberry. Happy coding and gaming!
+
+# More info
+
+* [V-Play Game Engine website]()

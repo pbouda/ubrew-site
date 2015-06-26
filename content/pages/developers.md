@@ -25,6 +25,5 @@ Version 3.
 
 # More info
 
-* [Read more about the how and why of our approach]({filename}/General/20150624-why-we-are-doing-this.md)
 * [The Raspberry Pi website](https://www.raspberrypi.org/)
 * [The V-Play Game Engine website](http://v-play.net/)

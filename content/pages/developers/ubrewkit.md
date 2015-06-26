@@ -208,6 +208,8 @@ and run Flappy Bird on the Raspberry.
 
 # More info
 
+* [The Raspberry Pi website](https://www.raspberrypi.org/)
 * [Buildroot website](http://buildroot.net/)
 * [Qt website](http://www.qt.io/)
+* [Embedded development with Buildroot and Qt](https://github.com/pbouda/buildroot-qt-dev)
 * [V-Play Game Engine website]()
