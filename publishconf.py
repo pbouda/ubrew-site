@@ -10,11 +10,13 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'http://h2407922.stratoserver.net'
+SITEURL = 'http://www.ubrew.it'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+FEED_ALL_RSS = 'feeds/all.rss'
+CATEGORY_FEED_RSS = 'feeds/%s.rss'
 
 DELETE_OUTPUT_DIRECTORY = True
 
