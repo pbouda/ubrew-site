@@ -40,5 +40,5 @@ Of course, we supported the campaign and can't wait to get the boy into our
 hands :-) The nice look and shiny design of the Arduboy was definitely one of
 the reasons for our support. The Kickstarter page lists some projects that
 pioneered games on the Arduino and that provide great material to start with
-programming graphics and sound on a low-end platform. A crazy project somehow,
+programming graphics and sound on a low-end platform. A crazy project,
 that we hope to see around and growing for a longer time.
