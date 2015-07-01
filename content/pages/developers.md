@@ -21,7 +21,7 @@ Version 3.
 # Next steps
 
 1. [Build the μbrew development kit for the Raspberry]({filename}developers/ubrewkit.md)
-2. [Create a game with V-Play]({filename}developers/vplay.md)
+2. [Build and run a game with V-Play]({filename}developers/vplay.md)
 
 # More info
 
