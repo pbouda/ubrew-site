@@ -14,8 +14,10 @@ Released under AGPLv3+ license, see LICENSE
 """
 
 from datetime import datetime, timedelta
-from pelican import signals, utils
+from pelican import signals, utils, contents
 import icalendar
+from icalendar import vDatetime
+import re
 import logging
 import os.path
 import pytz
@@ -40,7 +42,7 @@ def parse_tstamp(ev, field_name):
     """
     try:
         return datetime.strptime(ev[field_name], '%Y-%m-%d %H:%M')
-    except Exception, e:
+    except Exception as e:
         log.error("Unable to parse the '%s' field in the event named '%s': %s" \
             % (field_name, ev['title'], e))
         raise
@@ -74,36 +76,42 @@ field in the '%s' event.""" % (c, ev['title']))
     return timedelta(**tdargs)
 
 
-def parse_article(generator, metadata):
+def parse_article(article):
     """Collect articles metadata to be used for building the event calendar
 
     :returns: None
     """
-    if 'event-start' not in metadata:
+    global events
+
+    if type(article) is not contents.Article:
         return
 
-    dtstart = parse_tstamp(metadata, 'event-start')
+    if not 'event-start' in article.metadata:
+        return
 
-    if 'event-end' in metadata:
-        dtend = parse_tstamp(metadata, 'event-end')
+    dtstart = parse_tstamp(article.metadata, 'event-start')
 
-    elif 'event-duration' in metadata:
-        dtdelta = parse_timedelta(metadata)
+    if 'event-end' in article.metadata:
+        dtend = parse_tstamp(article.metadata, 'event-end')
+
+    elif 'event-duration' in article.metadata:
+        dtdelta = parse_timedelta(article.metadata)
         dtend = dtstart + dtdelta
 
     else:
         msg = "Either 'event-end' or 'event-duration' must be" + \
-            " speciefied in the event named '%s'" % metadata['title']
+            " specified in the event named '%s'" % article.metadata['title']
         log.error(msg)
         raise ValueError(msg)
 
-    events.append((dtstart, dtend, metadata))
+    events.append((dtstart, dtend, article))
 
 
 def generate_ical_file(generator):
     """Generate an iCalendar file
     """
     global events
+
     ics_fname = generator.settings['PLUGIN_EVENTS']['ics_fname']
     if not ics_fname:
         return
@@ -119,18 +127,26 @@ def generate_ical_file(generator):
     ical.add('version', '2.0')
 
     for e in events:
-        dtstart, dtend, metadata = e
+        dtstart, dtend, article = e
+        
+        title = re.sub("&nbsp;", " ", article.metadata['title'])
 
         ie = icalendar.Event(
-            summary=metadata['summary'],
-            dtstart=dtstart,
-            dtend=dtend,
-            dtstamp=metadata['date'],
-            priority=5,
-            uid=metadata['title'] + metadata['summary'],
+            summary=title,
+            dtstart=vDatetime(dtstart).to_ical(),
+            dtend=vDatetime(dtend).to_ical(),
+            dtstamp=vDatetime(article.metadata['date']).to_ical(),
+            uid=title,
         )
-        if 'event-location' in metadata:
-            ie.add('location', metadata['event-location'])
+
+        if 'event-location' in article.metadata:
+            ie.add('location', article.metadata['event-location'])
+
+        if 'event-origanizer' in article.metadata:
+            ie.add('organizer', article.metadata['event-organizer'])
+
+        if 'event-url' in article.metadata:
+            ie.add('description', article.metadata['event-url'])
 
         ical.add_component(ie)
 
@@ -141,10 +157,12 @@ def generate_ical_file(generator):
 
 def generate_events_list(generator):
     """Populate the event_list variable to be used in jinja templates"""
+    global events
     generator.context['events_list'] = sorted(events, reverse=True)
+    events = []
 
 def register():
-    signals.article_generator_context.connect(parse_article)
+    signals.content_object_init.connect(parse_article)
     signals.article_generator_finalized.connect(generate_ical_file)
     signals.article_generator_finalized.connect(generate_events_list)
 

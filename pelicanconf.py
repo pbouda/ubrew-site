@@ -23,7 +23,11 @@ AUTHOR_FEED_RSS = None
 THEME = 'themes/dopetrope'
 
 PLUGIN_PATHS = [ "plugins" ]
-PLUGINS = [ "pelican-page-hierarchy" ]
+PLUGINS = [ "pelican-page-hierarchy", "events" ]
+
+PLUGIN_EVENTS = {
+    'ics_fname': 'ubrew_calendar.ics',
+}
 
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
