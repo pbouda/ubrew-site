@@ -12,7 +12,7 @@ newsletter](http://eepurl.com/bqO4lj).
 
 ### What is μbrew?
 
-Watch our introductory video to learn more about the μbrew gaming console:
+Watch our introductory video to learn more about the μbrew game console:
 
 <video tabindex="0" controls="" preload="none" style="width:100%;" poster="https://owncloud.cidles.eu/public.php?service=files&t=a06fdfcfdaf621910a985c266262c0db&download">
     <source src="https://owncloud.cidles.eu/public.php?service=files&t=cbcc3e41a2f29b232154458657d84422&download" type="video/mp4" />
