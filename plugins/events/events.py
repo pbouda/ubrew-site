@@ -158,7 +158,7 @@ def generate_ical_file(generator):
 def generate_events_list(generator):
     """Populate the event_list variable to be used in jinja templates"""
     global events
-    generator.context['events_list'] = sorted(events, reverse=True)
+    generator.context['events_list'] = sorted([e for e in events if e[0] > datetime.now()], reverse=True)
     events = []
 
 def register():
