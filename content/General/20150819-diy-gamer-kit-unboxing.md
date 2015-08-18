@@ -17,7 +17,7 @@ Of course we had to order one and it finally arrived! See our unboxing video:
 Now we have to build it and play... Stay tuned for a review and gaming video.
 The kit is available via the website of Technology Will Save Us:
 
-[https://www.techwillsaveus.com/resources/diy-gamer-kit/](https://www.techwillsaveus.com/resources/diy-gamer-kit/)
+[https://www.techwillsaveus.com/shop/diy-kits/diy-gamer-kit-arduino/](https://www.techwillsaveus.com/shop/diy-kits/diy-gamer-kit-arduino/)
 
 The game development library and some example games are on GitHub:
 
