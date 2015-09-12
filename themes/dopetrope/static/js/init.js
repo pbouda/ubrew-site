@@ -4,6 +4,24 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+function loadCommentCounts() {
+
+    function setCount(element) {
+        return function(data, textStatus, jqXHR) {
+            var strComm = ' comments';
+            if (data === 1) {
+                strComm = ' comment'
+            }
+            $(element).html('' + data + strComm);
+        }
+    }
+
+	$('.comment-count-container').each(function() {
+        var url = $(this).attr('href').split('#')[0];
+        $.get('//comments.ubrew.it/count', { uri: url }, setCount(this));
+    });
+}
+
 (function($) {
 
 	skel.init({

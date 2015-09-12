@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<body class="homepage">
+<body class="homepage" onload="loadCommentCounts();">
 
 {% include 'header_index.html' %}
 
@@ -123,7 +123,11 @@
 										<footer>
 											<ul class="actions">
 												<li><a href="/{{ article.url }}" class="button icon fa-file-text">Read</a></li>
-												<li><a href="/{{ article.url }}#comments" class="button alt icon fa-comment">0 comments</a></li>
+												<li>
+													<a href="/{{ article.url }}#comments" class="button alt icon fa-comment comment-count-container">
+														Comment
+													</a>
+												</li>
 											</ul>
 										</footer>
 									</section>
