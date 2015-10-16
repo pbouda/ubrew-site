@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
-SITENAME = 'μbrew.'
-SITESUBTITLE = 'DIY and Embedded Gaming.'
+SITENAME = 'ZEOMA.'
+SITESUBTITLE = 'Your Modular Game Console.'
 SITEURL = ''
 
 PATH = 'content'
