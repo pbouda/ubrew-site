@@ -22,7 +22,7 @@ build your own game for our supported platforms. The kit will be platform
 independant, so that you can boot it on most major embedded development
 platforms. Last but not least, all the games that you build will also work on
 mobile phones, so that you can monetize your games at any time. Head over to
-[our developer's section]({filename}/pages/developers.md) to install the
+[our developer's section]({filename}/pages/join.md) to install the
 current version of the kit on your Raspberry and play your first game!
 
 More information will follow over the next few posts in the coming weeks, so
