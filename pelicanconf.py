@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
-SITENAME = 'ZEOMA.'
+SITENAME = 'μbrew ZEOMA.'
 SITESUBTITLE = 'Your Modular Game Console.'
 SITEURL = ''
 
