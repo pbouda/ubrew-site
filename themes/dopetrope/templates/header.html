@@ -11,7 +11,7 @@
 				<ul>
 					<!-- <li {% if output_file == 'index.html' %}class="current"{% endif %}><a href="/">Home</a></li>-->
                     {% if DISPLAY_PAGES_ON_MENU -%}
-                    {% for p in PAGES|sort(attribute='menuindex') %}
+                    {% for p in pages|sort(attribute='menuindex') %}
                     	{% if p.parent is none %}
 	                        <li {% if page and ( (p.url != "" and page.url.startswith(p.url)) or (p.url == "" and page.url == "") ) %}class="current"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
                     		{% if loop.index == loop.length %}
